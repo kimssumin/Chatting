@@ -5,25 +5,27 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
   </head>
 
   <body>
     <div class="container">
-      <header>
-        <h1>Chatting with me</h1>
-        <a href="/">Go to Home</a>
-      </header>
-    </div>
-
-    <div>
       <div id="joinbox">
-        <h1>Welcome to Sumin Chat</h1>
+        <h1>Chatting with me</h1>
+        <h3>Welcome to Sumin Chat</h3>
         <form action="/chatting.html">
-          <label>Nickname</label>
-          <input type="text" name="username" placeholder="닉네임" required />
-          <label>Group Number</label>
-          <input type="text" name="room" placeholder="그룹명" required />
-          <button>JOIN</button>
+          <div>
+            <input type="text" name="username" placeholder="닉네임을 입력해주세요" required />
+          </div>
+          <div>
+            <input type="text" name="room" placeholder="그룹명을 입력해주세요" required />
+          </div>
+
+          <button class="form_btn">JOIN</button>
         </form>
       </div>
     </div>
