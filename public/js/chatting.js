@@ -44,7 +44,7 @@ socket.on('info', ({ room, users }) => {
   });
   const html =
     `
-    <h2 class="room-title">Room ${room}</h2>
+    <h2 class="room-title"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;${room}</h2>
     <h3 class="list-title">Users</h3>
     <ul class="users">` +
     userList +
