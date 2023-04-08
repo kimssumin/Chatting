@@ -26,8 +26,9 @@
 
 ![image](https://user-images.githubusercontent.com/96935132/230733170-fbee93f8-3451-463d-985e-1b01d4587543.png)
 
-- **같은 그룹명 내에 접속해 있는 중복 닉네임이 존재하는지 체크**
-  ![image](https://user-images.githubusercontent.com/96935132/230733280-7bfa3063-a39b-4b4c-9f9a-13e1979a73ad.png)
+#### ✅ **같은 그룹명 내에 접속해 있는 중복 닉네임이 존재하는지 체크**
+
+![image](https://user-images.githubusercontent.com/96935132/230733280-7bfa3063-a39b-4b4c-9f9a-13e1979a73ad.png)
 
 <br>
 
@@ -60,3 +61,5 @@
 - EXIT 버튼 혹은 뒤로가기 버튼으로 초기화면 진입 가능
 
 ![image](https://user-images.githubusercontent.com/96935132/230733950-8223aab8-fb7c-4a51-a690-7e4a63f1c3f5.png)
+
+#### ✅ **해당 방 참가 인원 표시**
