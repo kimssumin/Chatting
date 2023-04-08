@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chatting In Group</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/chat.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Chatting</h1>
+        <a href="/">Go to Home</a>
+      </header>
+    </div>
+
+    <div class="chat_message_box">
+      <div id="sideArea" class="chat_sideArea"></div>
+      <div class="chat__main">
+        <div id="messages" class="chat_msg"></div>
+
+        <div class="submit_message">
+          <form id="userMsg">
+            <input name="message" placeholder="메시지를 입력해주세요" autocomplete="off" />
+            <button>전송</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/chatting.js"></script>
+  </body>
+</html>
