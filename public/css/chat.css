@@ -1,0 +1,141 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  background: #ebecf0;
+}
+
+a{
+  color : rgb(34, 85, 50);
+  margin : auto;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h2{
+  font-size: 30px;
+}
+
+form {
+  margin : 40px;
+}
+
+form input {
+  background: #eee;
+  padding: 10px;
+  margin: 8px 0;
+  width: 70%;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: inset 5px 2px 5px #babebc, inset -5px -5px 12px #fff;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  background-color: rgb(50, 128, 75);
+  color: whitesmoke;
+}
+
+ul{
+  list-style: none;
+}
+
+li i{
+  color :rgb(50, 128, 75);
+  font-weight: lighter;
+}
+
+.chat_sideArea{
+  margin-top: 30px;
+}
+
+.list-title{
+  width : 80%;
+  border-radius: 10px;
+  margin : auto;
+  margin-top: 30px;
+  color: rgba(50, 128, 75, 0.645);
+}
+
+.users{
+  margin : 13px 0px 40px 0px;
+  font-weight: lighter;
+  line-height:2vh;
+  font-size: 14px;
+}
+
+.container {
+  width: 100%;
+  min-height: 500px;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebecf0;
+}
+
+.chat_main{
+  width : 80%;
+  margin : auto;
+  border-top : rgba(3, 55, 19, 0.081) solid 1px;
+  padding-top: 20px;
+}
+
+
+.chat_message_box {
+  margin : 50px;
+  border-radius: 10px;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;
+  width: 80%;
+  height: 90%;
+  padding: 30px 0px 10px 0px;
+}
+
+.message{
+  /* width: 80%; */
+  margin: auto;
+  margin-bottom: 40px;
+  /* border-bottom :rgba(3, 55, 19, 0.081) solid 1px; */
+}
+
+.message p{
+  text-align: left;
+  margin : 15px 80px;
+}
+
+.message .message_name {
+  color: rgb(3, 55, 19);
+  font-weight: bolder;
+  margin-right : 20px;
+}
+
+.message .message_meta {
+  color: rgba(50, 128, 75, 0.444);
+}
+
+.exit{
+  margin: 20px 0px;
+}
+.form_btn {
+  box-shadow: -5px -5px 10px #fff, 5px 5px 8px #babebc;
+}
+
+.form_btn:active {
+  box-shadow: inset 1px 1px 2px #babebc, inset -1px -1px 2px #fff;
+}
+
+.form_btn:focus{
+  background-color :rgba(3, 55, 19, 0.081);
+}
+

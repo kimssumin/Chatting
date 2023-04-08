@@ -27,8 +27,8 @@ socket.on('message', (msg) => {
   const html = `
     <div class="message">
         <p>
-          <span class="message__name">${msg.username}</span>
-          <span class="message__meta">${nowTime()}</span>
+          <span class="message_name">${msg.username}</span>
+          <span class="message_meta">${nowTime()}</span>
         </p>
         <p>${msg.message}</p>
       </div>
@@ -40,7 +40,7 @@ socket.on('message', (msg) => {
 socket.on('info', ({ room, users }) => {
   let userList = '';
   users.forEach((user) => {
-    userList += `<li>${user.username}</li>`;
+    userList += `<li><i class="fa fa-commenting-o" aria-hidden="true"></i>&nbsp;${user.username}</li>`;
   });
   const html =
     `
