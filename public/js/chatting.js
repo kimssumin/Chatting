@@ -25,7 +25,7 @@ const nowTime = () => {
 socket.on('message', (msg) => {
   console.log('message : ', msg);
 
-  const html = `
+  let html = `
     <div class="message">
         <p>
           <span class="message_name">${msg.username}</span>
@@ -34,10 +34,19 @@ socket.on('message', (msg) => {
         <p>${msg.message}</p>
       </div>
   `;
-
+  if (msg.username == names) {
+    html = `
+    <div class="message" style = "text-align : center">
+        <p style = "text-align : right">
+          <span class="message_name" >${msg.username}</span>
+          <span class="message_meta">${nowTime()}</span>
+        </p>
+        <p style = "text-align : right">${msg.message}</p>
+      </div>
+  `;
+  }
   $messages.insertAdjacentHTML('beforeend', html);
   window.scrollTo({ top: $messages.scrollHeight, behavior: 'smooth' });
-  //document.body.scrollTop = document.body.scrollHeight; // $chatMsgdisplay
 });
 
 socket.on('info', ({ room, users }) => {
