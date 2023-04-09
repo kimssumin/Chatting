@@ -3,6 +3,7 @@ const names = urlParams.get('username');
 
 const socket = io();
 const $userMsg = document.querySelector('#userMsg');
+const $chatMsgdisplay = document.querySelector('.chat_main');
 const $msg = $userMsg.querySelector('input');
 const $submitMsg = $userMsg.querySelector('button');
 const $messages = document.querySelector('#messages');
@@ -35,6 +36,8 @@ socket.on('message', (msg) => {
   `;
 
   $messages.insertAdjacentHTML('beforeend', html);
+  window.scrollTo({ top: $messages.scrollHeight, behavior: 'smooth' });
+  //document.body.scrollTop = document.body.scrollHeight; // $chatMsgdisplay
 });
 
 socket.on('info', ({ room, users }) => {
