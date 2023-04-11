@@ -16,12 +16,16 @@ a{
   font-weight: bold;
 }
 
+span{
+  text-align: left;
+}
+
 h2{
   font-size: 30px;
 }
 
 form {
-  margin : 40px;
+  margin : 10px;
 }
 
 form input {
@@ -85,6 +89,8 @@ li i{
   background: #ebecf0;
 }
 
+
+/* 메시지 */
 .chat_main{
   width : 80%;
   margin : auto;
@@ -102,27 +108,105 @@ li i{
   padding: 30px 0px 10px 0px;
 }
 
-.message{
-  /* width: 80%; */
-  margin: auto;
-  margin-bottom: 40px;
-  /* border-bottom :rgba(3, 55, 19, 0.081) solid 1px; */
+.chat_msg{
+  margin : 0px 70px;
 }
 
-.message p{
-  text-align: left;
-  margin : 15px 80px;
+.fmessage-main, .mymessage{
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.message .message_name {
-  color: rgb(3, 55, 19);
-  font-weight: bolder;
-  margin-right : 20px;
+/*다른사람이 보낸 메시지*/
+#profile{
+  margin-right: 0.625rem;
+  color : rgba(92, 121, 101, 0.452);
 }
 
-.message .message_meta {
-  color: rgba(50, 128, 75, 0.444);
+.fmessage{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-top: 0.5rem;
+  margin-bottom: 0.7rem;
 }
+
+
+.fmessage-main > .balloon {
+  margin-top: 0.3125rem;
+  padding: 0.4375rem;
+  border: 1px solid whitesmoke;
+  border-radius: 0.1875rem;
+  background-color: whitesmoke;
+  font-size: 0.8125rem;
+  color: black;
+  width : max-content;
+  max-width: 400px;
+}
+
+.fmessage-main > .balloon::before {
+  content: "";
+  border-bottom: 0.6875rem solid transparent;
+  border-right: 0.6875rem solid whitesmoke;
+  position: absolute;
+  top: 1.563rem;
+  left: -0.5rem;
+}
+
+.fmessage .message_meta{
+  align-self: flex-end;
+  flex-basis: 8.75rem;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: rgba(50, 128, 75, 0.452);
+  text-align: center;
+}
+
+
+/*내가 보낸 메시지*/
+.mymessage{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 0.625rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mymessage .message_meta{
+  align-self: flex-end;
+  flex-basis: 8.75rem;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: rgba(50, 128, 75, 0.452);
+  text-align: center;
+}
+
+
+.mymessage > .balloon{
+  margin-top: 0.3125rem;
+  padding: 0.4375rem;
+  border: 1px solid rgb(50, 128, 75);
+  border-radius: 0.1875rem;
+  background-color: rgb(50, 128, 75);
+  font-size: 0.8125rem;
+  color: white;
+  width : max-content;
+  max-width: 400px;
+}
+
+.mymessage> .balloon::before {
+  content: "";
+  border-bottom: 0.6875rem solid transparent;
+  border-left: 0.6875rem solid rgb(50, 128, 75);
+  position: absolute;
+  top: 0.625rem;
+  right: -0.5rem;
+}
+
 
 .exit{
   margin: 20px 0px;
@@ -139,3 +223,9 @@ li i{
   background-color :rgba(3, 55, 19, 0.081);
 }
 
+
+@media (max-width : 750px){
+  .container{
+    display: none;
+  }
+}

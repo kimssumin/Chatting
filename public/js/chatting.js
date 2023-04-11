@@ -19,33 +19,32 @@ const nowTime = () => {
   let hour = now.getHours();
   let minutes = now.getMinutes();
 
-  return month + '월 ' + date + '일, ' + dayofWeek + ' , ' + hour + 'H ' + minutes + 'M';
+  return month + '월 ' + date + '일, ' + dayofWeek + ' , ' + hour + ':' + minutes;
 };
 
 socket.on('message', (msg) => {
   console.log('message : ', msg);
 
   let html = `
-    <div class="message">
-        <p>
-          <span class="message_name">${msg.username}</span>
-          <span class="message_meta">${nowTime()}</span>
-        </p>
-        <p>${msg.message}</p>
+    <div class="fmessage">
+      <i class="fas fa-user-circle fa-2x" id = "profile"></i>
+      <div class = "fmessage-main">
+        <span class="message_name">${msg.username}</span>
+        <span class = "balloon">${msg.message}</span>
       </div>
+      <span class="message_meta">${nowTime()}</span>
+    </div>
   `;
   if (msg.username == names) {
     html = `
-    <div class="message" style = "text-align : center">
-        <p style = "text-align : right">
-          <span class="message_name" >${msg.username}</span>
-          <span class="message_meta">${nowTime()}</span>
-        </p>
-        <p style = "text-align : right">${msg.message}</p>
-      </div>
+    <div class="mymessage" >
+      <span class = "balloon">${msg.message}</span>
+      <span class="message_meta">${nowTime()}</span>
+    </div>
   `;
   }
   $messages.insertAdjacentHTML('beforeend', html);
+
   window.scrollTo({ top: $messages.scrollHeight, behavior: 'smooth' });
 });
 
