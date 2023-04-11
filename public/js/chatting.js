@@ -50,14 +50,16 @@ socket.on('message', (msg) => {
 
 socket.on('info', ({ room, users }) => {
   let userList = '';
-  users.forEach((user) => {
+  let cnt = 0;
+  users.forEach((user, idx) => {
     userList += `<li><i class="fa fa-commenting-o" aria-hidden="true"></i>&nbsp;${user.username}</li>`;
+    cnt = idx;
   });
   const html =
     `
     <h2 class="room-title"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;${room}</h2>
-    <h3 class="list-title">Users</h3>
-    <ul class="users">` +
+    <h3 class="list-title" onclick = "onair()">Online&nbsp<i class="fa fa-twitch" aria-hidden="true"></i>${cnt+1}</h3>
+    <ul class="users" style = "display : none ; transition: all 1.3s;" >` +
     userList +
     `</ul>`;
 
@@ -86,3 +88,20 @@ $userMsg.addEventListener('submit', (e) => {
     console.log('메시지 전송 성공');
   });
 });
+
+
+
+function onair() {
+  let user = document.querySelector(".users");
+  let initheight = getComputedStyle(user).height;
+  
+  if (user.style.display == 'none') {
+    document.querySelector(".users").style.cssText = 'display : block';
+
+  }
+  else {
+  //   document.querySelector(".users").classList.toggle('collapsed');
+    document.querySelector(".users").style.cssText = 'display : none';
+  }
+  
+}
