@@ -40,26 +40,29 @@
 
 #### ✅ **처음 그룹에 입장하면 Admin 에서 Welcome 메시지를 전송**
 
-![image](https://user-images.githubusercontent.com/96935132/230733328-09202add-a8af-497b-88a9-80bf6ff3a842.png)
+![image](https://user-images.githubusercontent.com/96935132/231310420-e3aff421-4d3e-4678-8462-96cd66121b0e.png)
 
 #### ✅ **생성된 그룹에 다른 user가 입장하면 접속중인 user 목록에 새로운 user 추가**
 
 #### ✅ **기존에 있던 user 의 채팅창에 새로운 user 의 입장 알림 메시지가 전송됨**
 
-![image](https://user-images.githubusercontent.com/96935132/230733588-303a0ae4-1ac4-48b5-821d-34730f3a3618.png)
+![image](https://user-images.githubusercontent.com/96935132/231310476-d76d2220-7b7c-4bf1-87ce-64fb0ca98463.png)
 
 #### ✅ **채팅기능**
 
-![image](https://user-images.githubusercontent.com/96935132/230733740-ce2a766d-00a6-4972-b742-3feb214d5f0b.png)
+![image](https://user-images.githubusercontent.com/96935132/231310557-c8a2e2af-fd45-448f-bbf1-1985f18b9870.png)
 
 #### ✅ **동시접속 테스트**
 
-![image](https://user-images.githubusercontent.com/96935132/230733918-b7498fc5-0a07-47ca-aa94-60de4e3b04ca.png)
+![Collage](https://user-images.githubusercontent.com/96935132/231314069-ca1e23ef-bf0b-4b5d-a1b0-52ecafc8a207.png)
 
 #### ✅ **퇴장 알림**
 
 - EXIT 버튼 혹은 뒤로가기 버튼으로 초기화면 진입 가능
 
-![image](https://user-images.githubusercontent.com/96935132/230733950-8223aab8-fb7c-4a51-a690-7e4a63f1c3f5.png)
+  ![image](https://user-images.githubusercontent.com/96935132/231314223-a5bdb651-f086-4509-9f7d-38ccf6312db6.png)
 
 #### ✅ **해당 방 참가 인원 표시**
+
+- online 상태인 인원을 우선 표기하고, 토글 형태로 참여중인 닉네임들을 보여준다
+  ![Collage (1)](https://user-images.githubusercontent.com/96935132/231314547-2adbc5e1-bfb8-4a86-9eef-7970669a0a87.png)
